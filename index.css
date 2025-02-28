@@ -1,0 +1,140 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.first{
+   background-image: url(gradient_2.jpg);
+   /* background-image: url(dark_blue_gradient_background.jpg) ; */
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+  
+}
+.fix{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50rem;
+    position: fixed;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    gap: 10px;
+    padding-left: 50px;
+}
+header button{
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    width: 180px;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px; 
+    font-weight: 600; 
+    cursor: pointer;
+}
+header button:hover{
+    box-shadow: 0 0 20px white;
+}
+header a{
+    color: rgb(40, 40, 233);
+    text-decoration: none ;
+}
+header h1{
+    color: white;
+    line-height: 0px;
+    font-family: system-ui;
+}
+header h3{
+    color: white;
+    text-align: center;
+    line-height: 0px;
+    font-family: system-ui;
+}
+.hero h1{
+    color: white;
+    font-family: Helvetica;
+    text-align: center;
+    font-size: 50px; 
+    padding-left: 350px;
+    padding-right: 350px;
+    font-weight: 900;
+    
+}
+.hero p{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 35px; 
+    padding-left: 350px;
+    padding-right: 350px; 
+}
+.hero button{
+    background-color: rgb(13, 13, 255);
+    border: none;
+    width: 180px;
+    height: 50px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-left: 600px;
+    cursor: pointer;
+}
+.hero a{
+    text-decoration: none;
+    color: white;
+}
+.hero button:hover{
+    box-shadow: 0 0 20px white;
+}
+.rating{
+    margin-top: 70px;
+    text-align: center;
+    line-height: 1px;
+}
+.rating p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;   
+}
+.testimonial{
+    margin-top: 10rem;
+}
+.test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* text-align: center; */
+
+}
+.test p{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 20px;
+}
+.hey{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    color: white;
+    line-height: 20px;
+   margin-left: 35px ;
+}
+
+.speech, .text, .voice, .language{
+    background-color: white;
+    padding-top: 20px; 
+    width: 300px;
+    height: 280px;
+    text-align: center;
+    border-radius: 10px;
+}

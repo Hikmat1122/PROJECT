@@ -1,0 +1,52 @@
+body{
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+.container{
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px ;
+    border-radius: 10px;
+}
+h1{
+    color: blue;
+}
+div{
+    margin: 30px 0 ;
+}
+button{
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:disabled{
+    background: #ccc;
+    cursor: not-allowed;
+}
+button:hover:not(:disabled){
+    background: rgb(6, 6, 170);
+}
+#transcript{
+    border: 1px solid #ccc;
+    padding: 15px;
+    background: #f9f9f9;
+    min-height: 100px;
+}
+textarea{
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
