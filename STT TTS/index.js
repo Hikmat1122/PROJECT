@@ -1,3 +1,24 @@
+const languages =[
+    {code: 'en-US', name: 'English (US)' },
+    {code: 'en-GB', name: 'English (UK)' },
+    {code: 'es-ES', name: 'Spanish (Spain)' },
+    {code: 'fr-FR', name: 'French' },
+    {code: 'de-DE', name: 'German' },
+    {code: 'hi-IN', name: 'Hindi' },
+    {code: 'zh-CN', name: 'Chinese (Mandarin)' },
+    {code: 'ar-SA', name: 'Arabic' },
+];
+
+const speechLangSelect = document.getElementById('speech-lang');
+const ttsLangSelect = document.getElementById('tts-lang');
+
+languages.forEach(lang => {
+    let option1 = new Option(lang.name, lang.code);
+    let option2 = new Option(lang.name, lang.code);
+    speechLangSelect.add(option1);
+    ttsLangSelect.add(option2);
+});
+
 const startRecordButton = document.getElementById('start record')
 const stopRecordButton = document.getElementById('stop record')
 const transcriptDisplay = document.getElementById('transcript')
@@ -35,6 +56,7 @@ if ('webkitSpeechRecognition' in window){
     alert('Speech recognition not supported in this browser.');
 }
 startRecordButton.addEventListener('click', () => {
+    recognition.lang = speechLangSelect.value;
     recognition.start();
 });
 
@@ -49,6 +71,7 @@ speakButton.addEventListener('click', () => {
     const text = textInput.value;
     if (text) {
         const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = ttsLangSelect.value;
         window.speechSynthesis.speak(utterance);
     }
 });

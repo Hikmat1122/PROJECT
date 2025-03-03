@@ -5,9 +5,9 @@ body{
 }
 .first{
    background-image: url(gradient_2.jpg);
-   /* background-image: url(dark_blue_gradient_background.jpg) ; */
    background-repeat: no-repeat;
    background-size: cover;
+  
 }
 header{
     display: flex;
@@ -63,6 +63,7 @@ header h3{
     font-family: Helvetica;
     text-align: center;
     font-size: 50px; 
+    padding-top: 50px;
     padding-left: 350px;
     padding-right: 350px;
     font-weight: 900;
@@ -137,4 +138,108 @@ header h3{
     height: 280px;
     text-align: center;
     border-radius: 10px;
+}
+.second{
+    display: flex;
+   justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 150px;
+    
+}
+.write-up h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    line-height: 20px;   
+}
+.write-up p{
+    color: white;
+    font-size: 25px; 
+
+}
+.image{
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.reviews{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    padding: 3rem;
+    
+}
+.reviews h4{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    width: 20rem;
+    height: 15rem;
+    line-height: 15rem;
+}
+.reviews p{
+    width: 20rem;
+    height: 15rem;
+    color: white;
+    font-size: 25px;
+    line-height: 2.5rem;  
+}
+.rev{
+    color: white;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 5rem;
+    padding-top: 10rem;
+    line-height: 0px;
+}
+.scan h5{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    color: white;
+    line-height: 10px;
+}
+.scanning{
+   display: block;
+   margin: auto;
+   background-color: white;
+   border-radius: 30px;
+}
+.vox{
+    display: block;
+    margin: auto;
+    background-color: white;
+    margin-top: 20px;
+    box-shadow: 0 0 10px white
+}
+.vox:hover{
+    box-shadow: 0 0 20px white;
+}
+footer{
+    min-height: 50px;
+}
+footer p{
+    margin-top: 50px;
+    color: rgba(185, 169, 169, 0.404);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px 0px;
+  
+}
+footer p:hover{
+    color: white;
+}
+
+.last span{
+    color: rgba(185, 169, 169, 0.404);
 }

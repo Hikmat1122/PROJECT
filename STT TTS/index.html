@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Speech-to-Text and Text-to-Speech</h1>
-
         <div class="stt">
             <h2>Speech-to-Text</h2>
+            <label for="Speech Lanuage">Select Languages:</label>
+            <select name="" id="speech-lang"></select>
+            <br>
             <button id="start record">Start Recording</button>
             <button id="stop record" disabled>Stop Recording</button>
             <p id="transcript">Speech appears here</p>
@@ -19,11 +22,100 @@
 
         <div class="tts">
             <h2>Text-to-Speech</h2>
+            <label for="tts-lang">Select Accents:</label>
+            <select name="" id="tts-lang"></select>
+            <br>
             <textarea name="" id="text-input" placeholder="Type something here..."></textarea>
             <button id="speak">Speak Text</button>
          
         </div>
     </div>
-    <script src="index.js"></script>
+    <script>
+        const languages =[
+    {code: 'en-US', name: 'English (US)' },
+    {code: 'en-GB', name: 'English (UK)' },
+    {code: 'es-ES', name: 'Spanish (Spain)' },
+    {code: 'fr-FR', name: 'French' },
+    {code: 'de-DE', name: 'German' },
+    {code: 'hi-IN', name: 'Hindi' },
+    {code: 'zh-CN', name: 'Chinese (Mandarin)' },
+    {code: 'ar-SA', name: 'Arabic' },
+];
+
+const speechLangSelect = document.getElementById('speech-lang');
+const ttsLangSelect = document.getElementById('tts-lang');
+
+languages.forEach(lang => {
+    let option1 = new Option(lang.name, lang.code);
+    let option2 = new Option(lang.name, lang.code);
+    speechLangSelect.add(option1);
+    ttsLangSelect.add(option2);
+});
+
+const startRecordButton = document.getElementById('start record')
+const stopRecordButton = document.getElementById('stop record')
+const transcriptDisplay = document.getElementById('transcript')
+
+let recognition;
+if ('webkitSpeechRecognition' in window){
+    recognition = new webkitSpeechRecognition();
+    recognition.continuous = true;
+    recognition.interimResults = true;
+    recognition.lang = 'en-US';
+
+    recognition.onstart = function() {
+        startRecordButton.disabled = true;
+        stopRecordButton.disabled = false;
+        transcriptDisplay.innerHTML = "Listening.."
+    };
+
+    recognition.onresult = function(event) {
+        let transcript = '';
+        for (let i = event.resultIndex; i < event.results.length; i++){
+            if (event.results[i].isFinal) {
+                transcript += event.results[i][0].transcript;
+            }
+        }
+        transcriptDisplay.innerHTML = transcript;
+    };
+    recognition.onerror = function (event) {
+        console.log(event.error);
+    }
+    recognition.onend = function (){
+        startRecordButton.disabled = false;
+        stopRecordButton.disabled = true;
+    };
+} else {
+    alert('Speech recognition not supported in this browser.');
+}
+startRecordButton.addEventListener('click', () => {
+    recognition.lang = speechLangSelect.value;
+    recognition.start();
+    Swal.fire({
+        icon: "info",
+        title: "Listening...",
+        text: "Please speak now.",
+        timer: 2000,
+        showConfrimButton: false
+    });
+});
+
+stopRecordButton.addEventListener('click', () => {
+    recognition.stop();
+});
+
+const speakButton = document.getElementById('speak');
+const textInput = document.getElementById('text-input');
+
+speakButton.addEventListener('click', () => {
+    const text = textInput.value;
+    if (text) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = ttsLangSelect.value;
+        window.speechSynthesis.speak(utterance);
+    }
+});
+
+    </script>
 </body>
 </html>

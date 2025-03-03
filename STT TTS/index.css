@@ -4,6 +4,10 @@ body{
     color: #333;
     text-align: center;
     padding: 20px;
+    background-image: url(ODURA10.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .container{
     max-width: 800px;
@@ -14,12 +18,23 @@ body{
     border-radius: 10px;
 }
 h1{
+    background-color: blue;
+    color: white;
+    min-width: 300px;
+    min-height: 50px;
+    padding-top:15px ;
+    border-radius: 20px;
+    text-align: center;
+
+}
+.container h2{
     color: blue;
 }
 div{
     margin: 30px 0 ;
 }
 button{
+    font-size: 15px;
     padding: 10px 20px;
     margin: 10px;
     border: none;
@@ -42,11 +57,29 @@ button:hover:not(:disabled){
     min-height: 100px;
 }
 textarea{
-    width: 80%;
+    width: 95%;
     height: 100px;
     padding: 10px;
     margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: none;
+}
+
+label{
+    line-height: 2rem;
+    width: 300px;
+    font-size: 20px;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+select{
+    border-color: rgb(0, 0, 80);
+    background-color: rgb(218, 227, 240);
+    border-radius: .7rem;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    width: 170px;
+    height: 30px;
+    cursor: pointer;
+    padding-left: 10px;
 }
