@@ -44,8 +44,11 @@ if ('webkitSpeechRecognition' in window){
             }
         }
         transcriptDisplay.innerHTML = transcript;
+       
     };
     recognition.onerror = function (event) {
+        swal("Sorry!", "Opps, something went wrong. Please try again later.", "error");
+
         console.log(event.error);
     }
     recognition.onend = function (){
@@ -58,20 +61,40 @@ if ('webkitSpeechRecognition' in window){
 startRecordButton.addEventListener('click', () => {
     recognition.lang = speechLangSelect.value;
     recognition.start();
+    swal("Listening...", "Please Speak Now!");
 });
 
 stopRecordButton.addEventListener('click', () => {
     recognition.stop();
+   
 });
 
-const speakButton = document.getElementById('speak');
-const textInput = document.getElementById('text-input');
-
-speakButton.addEventListener('click', () => {
-    const text = textInput.value;
-    if (text) {
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = ttsLangSelect.value;
-        window.speechSynthesis.speak(utterance);
+document.getElementById("speak").addEventListener("click", function (){
+    let text = document.getElementById("text-input").value;
+    if (text.trim() ===""){
+        swal("Sorry!", "Opps, Please enter some text.",);
+        return;
+        
     }
+    let utterance = new SpeechSynthesisUtterance(text);
+    speechSynthesis.speak(utterance);
+    swal({
+        title: "Speaking...",
+        text: `"${text}" is being read aloud.` ,
+        timer: 2000,
+        showConfrimButton: false,
+    });
 });
+
+// const speakButton = document.getElementById('speak');
+// const textInput = document.getElementById('text-input');
+
+// speakButton.addEventListener('click', () => {
+//     const text = textInput.value;
+//     if (text) {
+//         const utterance = new SpeechSynthesisUtterance(text);
+//         utterance.lang = ttsLangSelect.value;
+//         window.speechSynthesis.speak(utterance);
+//     }
+    
+// });

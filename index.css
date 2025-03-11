@@ -4,7 +4,7 @@ body{
     box-sizing: border-box;
 }
 .first{
-   background-image: url(gradient_2.jpg);
+   background-image: url(dark_blue_gradient_background.jpg);
    background-repeat: no-repeat;
    background-size: cover;
   
@@ -13,14 +13,14 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    text-align: center;
-  
+    text-align: center; 
 }
+
 .fix{
     display: flex;
     justify-content: space-evenly;
     gap: 50rem;
-    position: fixed;
+    position: fixed;   
 }
 .logo{
     display: flex;
@@ -99,7 +99,8 @@ header h3{
 .rating{
     margin-top: 70px;
     text-align: center;
-    line-height: 1px;
+    line-height: 0px;
+    padding-bottom: 40px;
 }
 .rating p{
     color: white;
@@ -108,14 +109,15 @@ header h3{
     font-weight: 600;   
 }
 .testimonial{
-    margin-top: 10rem;
+    padding: 30px;
+    padding-top: 4rem;
+    background: linear-gradient(to bottom, black, blue);
 }
 .test{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    /* text-align: center; */
 
 }
 .test p{
@@ -128,7 +130,7 @@ header h3{
     font-size: 70px;
     color: white;
     line-height: 20px;
-   margin-left: 35px ;
+    margin-left: 35px ;
 }
 
 .speech, .text, .voice, .language{
@@ -138,42 +140,97 @@ header h3{
     height: 280px;
     text-align: center;
     border-radius: 10px;
+    transition: ease 1000ms;
+    cursor: pointer;
+}
+.speech:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 5px;
+}
+.text:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 5px;
+}
+.voice:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 5px;
+}
+.language:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 5px;
 }
 .second{
     display: flex;
-   justify-content: center;
+    justify-content: center;
     align-items: center;
     gap: 40px;
-    margin-top: 150px;
-    
+    background-color: white;
 }
 .write-up h1{
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 60px;
     line-height: 20px;   
 }
 .write-up p{
-    color: white;
-    font-size: 25px; 
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px; 
 
 }
+.second button{
+    background-color: rgb(1, 1, 87);
+    border: none;
+    width: 180px;
+    height: 50px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease 1000ms;
+}
+.second a{
+    text-decoration: none;
+    color: white;
+    width: 30px;
+}
+.second button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 5px;
+    
+}
 .image{
-    background-color: white;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 0px;
+    margin-top: 10px;
+    background-color: rgb(1, 1, 87);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    width: 400px;
+    height: 416px;
+}
+.dashed{
+    position: absolute;
+    width: 410px;
+    height: 530px;
+    border-style: dotted;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    left: 45.7rem;
+    top: 49.9rem;
+}
+.reviewing{
+    background: linear-gradient(to bottom, blue, black);
+    padding-top: 150px;
 }
 .reviews{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 6rem;
-    padding: 3rem;
+    /* padding: 3rem; */
     
 }
 .reviews h4{
@@ -196,7 +253,7 @@ header h3{
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 5rem;
-    padding-top: 10rem;
+    /* padding-top: 10rem; */
     line-height: 0px;
 }
 .scan h5{
@@ -242,4 +299,141 @@ footer p:hover{
 
 .last span{
     color: rgba(185, 169, 169, 0.404);
+}
+.scan{
+    padding-top: 30px;
+    background: linear-gradient(to bottom, black, blue);
+
+}
+
+@media (max-width: 768px){
+    .first{
+        background: linear-gradient(to bottom, black, blue);
+       
+    }
+    .logo{
+        gap: 10px;
+        padding-left: 6px;
+    }
+    header{
+        display: flex;
+        justify-content: flex-start;
+        padding: none;
+        text-align: center; 
+    }
+    .fix{
+       flex-direction: row;
+        gap: 1rem;
+        position: fixed;  
+    }
+    .hero h1{
+        font-size: 40px; 
+        padding-top: 90px;
+        padding-left: 10px; 
+    }
+    .hero button{
+        width: 180px;
+        height: 50px;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        border-radius: 10px;
+        margin-left: none;
+        cursor: pointer;
+    }
+    header button{
+        font-size: 15px;
+        width: 130px;
+        height: 50px;
+    }
+    .hero p{
+        font-size: 25px; 
+        padding-left: 10px;  
+    }
+    .hero button{
+        margin-left: 100px;
+        cursor: pointer;
+    }
+    .rating{
+        margin-top: 50px;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+    .second{
+        flex-direction: column; 
+    }
+    .write-up h1{
+        font-size: 40px; 
+        margin: 90px;
+        padding-left: 10px;  
+        text-align: center;
+    }
+    .write-up p{
+        padding-left: 10px;     
+        font-size: 20px; 
+        text-align: start;
+    }
+    .image{
+        display: block;
+        margin: auto;
+        position: relative;
+        padding-top: 100px;
+        padding-bottom: 0px;
+        margin-top: 10px;
+        background-color: rgb(1, 1, 87);
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        width: 400px;
+        height: 416px;
+    }
+    .dashed{
+        left: 10.9rem;
+        top: 57.5rem;
+    }
+    .testimonial{
+        padding: 20px;
+        padding-top: 4rem;
+        background: linear-gradient(to bottom, black, blue);
+    }
+    .test{
+        margin: 20px;
+        display: block;
+        margin: auto;
+    }
+    .test p{
+        font-size: 20px;
+        font-weight: 500;
+        padding: 20px;
+    }
+    .reviews{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 30px;
+        padding: 3rem;   
+    }
+    .rev{
+        text-align: start;
+        font-size: 3rem;   
+    }
+    .scan h5{
+        text-align: start;
+        font-size: 3rem;  
+    }
+    .scanning{
+        display: flex;
+        align-items: flex-start;
+      
+        background-color: white;
+        border-radius: 30px;
+     }
+    .scan{
+        text-align: start;
+    }
+    
+    
+
+  
+
 }
