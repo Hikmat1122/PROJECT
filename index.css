@@ -10,26 +10,64 @@ body{
   
 }
 header{
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-around;
     padding: 20px;
     text-align: center; 
+    font-family: Arial, Helvetica, sans-serif; */
 }
+
 
 .fix{
     display: flex;
-    justify-content: space-evenly;
-    gap: 50rem;
-    position: fixed;   
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4rem;
+    padding: 20px;
+    /* gap: 10rem; */
+    /* position: fixed;  */
+    
 }
 .logo{
     display: flex;
     align-items: center;
-    justify-content: center;   
     gap: 10px;
+    padding: 20px;
     padding-left: 50px;
+    float: left;
 }
-header button{
+/* .home, .about{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+   
+}
+.home:hover{
+   background-color: white;
+   width: 80px;
+    padding: 20px;
+    border-radius: 10px;
+   color: blue;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur (10px);
+    background-color: blue;
+    box-shadow: -10px 0 10px black;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+} */
+.try{
     background-color: white;
     border: none;
     font-size: 15px;
@@ -40,7 +78,7 @@ header button{
     font-weight: 600; 
     cursor: pointer;
 }
-header button:hover{
+.try:hover{
     box-shadow: 0 0 20px white;
 }
 header a{
@@ -219,7 +257,7 @@ header h3{
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     left: 45.7rem;
-    top: 49.9rem;
+    top: 53rem;
 }
 .reviewing{
     background: linear-gradient(to bottom, blue, black);
@@ -284,7 +322,7 @@ footer{
 }
 footer p{
     margin-top: 50px;
-    color: rgba(185, 169, 169, 0.404);
+    color: white;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1rem;
@@ -293,18 +331,16 @@ footer p{
     padding: 10px 0px;
   
 }
-footer p:hover{
-    color: white;
-}
 
 .last span{
-    color: rgba(185, 169, 169, 0.404);
+    color: white;
 }
 .scan{
     padding-top: 30px;
     background: linear-gradient(to bottom, black, blue);
 
 }
+
 
 @media (max-width: 768px){
     .first{
@@ -356,17 +392,19 @@ footer p:hover{
     }
     .rating{
         margin-top: 50px;
-        text-align: center;
+        text-align: start;
+        padding: 30px;
         padding-bottom: 5px;
     }
     .second{
         flex-direction: column; 
+        align-items: start;
     }
     .write-up h1{
         font-size: 40px; 
-        margin: 90px;
-        padding-left: 10px;  
-        text-align: center;
+        padding: 30px;
+        text-align: start;
+        line-height: 1px;
     }
     .write-up p{
         padding-left: 10px;     
@@ -374,8 +412,6 @@ footer p:hover{
         text-align: start;
     }
     .image{
-        display: block;
-        margin: auto;
         position: relative;
         padding-top: 100px;
         padding-bottom: 0px;
@@ -387,8 +423,7 @@ footer p:hover{
         height: 416px;
     }
     .dashed{
-        left: 10.9rem;
-        top: 57.5rem;
+       display: none;
     }
     .testimonial{
         padding: 20px;
@@ -423,17 +458,18 @@ footer p:hover{
     }
     .scanning{
         display: flex;
-        align-items: flex-start;
-      
+        align-items: start;
+        text-align: start;
         background-color: white;
         border-radius: 30px;
      }
-    .scan{
+
+    footer p{
         text-align: start;
+        padding: 30px;
+        font-family: Arial, Helvetica, sans-serif;  
     }
     
-    
-
-  
-
 }
+
+
