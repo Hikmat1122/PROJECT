@@ -170,8 +170,39 @@ nav a:hover{
     }
     .menu-button{
         display: block;
-    }  
+    } 
+    nav button{
+        display: none;
+    } 
+    .sidebar{
+        padding-left: 7rem;
+        /* position: fixed; */
+        top: 0;
+        right: 0;
+        /* height: 100%; */
+        /* width: 250px; */
+        /* z-index: 999; */
+        backdrop-filter: blur(10px);
+        background-image: url(ODURA10.jpg);
+        box-shadow: -10px 0 10px rgb(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 20px;
+        width: 500px;
+        line-height: 10px;
+    }
 }
+    
+    
 @media (max-width: 400px) {
     .sidebar{
         width: 100%;
