@@ -19,6 +19,7 @@ header{
     justify-content: space-evenly;
     gap: 50rem;
     position: fixed;   
+    
 }
 .logo{
     display: flex;
@@ -125,6 +126,9 @@ footer p{
     padding: 10px 0px;
   
 }
+footer p:hover{
+    color: white;
+}
 
 @media (max-width: 768px){
     .logo{
@@ -138,9 +142,12 @@ footer p{
         text-align: center; 
     }
     .fix{
-       flex-direction: row;
+       flex-direction: column;
         gap: 1rem;
-        position: fixed;  
+        position: fixed; 
+    }
+    header button{
+        margin-left: 80px;
     }
     .about{
         flex-direction: column;
@@ -156,12 +163,14 @@ footer p{
     .about p{
         color: white;
         font-size: 20px;
-        width: 400px;
+        width: 350px;
     }
     .about img{
         background-color: blue;
         border-radius: 30px;
         text-align: start;
+        width: 350px;
+        margin-top: 50px;
     }
     .third{
         flex-direction: column;
@@ -184,7 +193,10 @@ footer p{
         color: white;
         font-size: 20px;
         line-height: 25px;
-        width: 500px;
+        width: 350px;
+    }
+    .third img{
+        width: 350px;
     }
     footer p{
         text-align: start;
